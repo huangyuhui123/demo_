@@ -1,0 +1,43 @@
+@import './default.less';
+@import './loading.less';
+ul,li{
+    list-style:none;
+}
+.clearfix{
+    &::after{
+        content:'';
+        clear:both;
+        display: block;
+        visibility: hidden;
+    }
+}
+
+
+.container{
+    display: flex;
+    .nav-left{
+        background-color:#001529;
+        width:15%;
+        min-width:180px;
+        height:calc(100vh);
+    }
+    .main{
+       flex:1;
+       height:calc(100vh);
+       background:@colorL;
+    }
+    .content{
+        position: relative;
+        padding:20px;
+    }
+}
+
+.content-wrap{
+    background-color: #ffffff;
+    border:1px solid #e8e8e8;
+    margin-top:-2px;
+    .ant-table-wrapper{
+        margin-left:-1px;
+        margin-right:-1px
+    }
+}
